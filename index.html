@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -43,7 +43,7 @@
     <input
       id="inp"
       type="text"
-      onkeyup="keyup(this , event)"
+      oninput="keyup(this , event)"
       placeholder="Type Here"
     />
     <h2 id="demo"></h2>
@@ -55,13 +55,8 @@
     let text;
     let keycode;
     function keyup(self, e) {
-      keycode = e.keyCode;
       inpVal = self.value;
-
-      if (inpVal == null || inpVal == "") {
-        inpVal = " ";
-      }
-
+  
       const letterToFarsi = {
         a: "ش",
         A: "َ",
@@ -187,8 +182,7 @@
       }
       demo.innerHTML += text;
 
-
-      if (keycode == 8) {
+      if (e.data == null) {
         demo.innerHTML = demo.innerHTML.slice(0, demo.innerHTML.length - 2);
       }
     }
