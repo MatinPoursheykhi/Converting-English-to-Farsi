@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -29,7 +29,7 @@
         margin-bottom: 2rem;
         border-radius: 5px;
       }
-      h1{
+      h1 {
         position: absolute;
         top: 100px;
         left: 50%;
@@ -54,7 +54,7 @@
     let text;
     function keyup(self, e) {
       inpVal = self.value;
-  
+
       const letterToFarsi = {
         a: "ش",
         A: "َ",
@@ -144,7 +144,10 @@
         ع: "u",
         ر: "v",
         ؤ: "V",
-        ض: "w",
+        ض: "q",
+      'ً': "Q",
+        ص: "w",
+        'ٌ': "W",
         ط: "x",
         ي: "X",
         غ: "y",
@@ -173,6 +176,9 @@
         7: "۷",
         8: "۸",
         9: "۹",
+        ':':':',
+        ';':';',
+        '"':'"'
       };
 
       for (let i = 0; i < inpVal.length; i++) {
